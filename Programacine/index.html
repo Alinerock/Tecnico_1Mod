@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Filmes, Séries e Animes</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script>
+        
+    </script>
+</head>
+
+<body class="container" data-spy="scroll" data-target="#navbar-exemplo">
+	<header>
+        <div class="navbar fixed-top navbar-light" style="background-color: paleturquoise;">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/Logo.png" width="50" height="30" class="d-inline-block align-top" alt="">Programacine
+            </a>
+
+  		    <form class="form-inline">
+    		    <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+    		    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+  		    </form>
+
+
+            <a href="index3.html"><button class="btn btn-primary" type="submit">Fazer Login</button></a>
+            <a href="index2.html"><button type="submit" class="btn btn-primary">Cadastre-se</button></a>
+
+
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu</button>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="#Filme">Filmes</a>
+                    <a class="dropdown-item" href="#Serie">Séries</a>
+                    <a class="dropdown-item" href="#Anime">Animes</a>
+                    <div role="separator" class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="index2.html">Cadastre-se</a>
+                </div>
+            </div>
+		</div>
+	</header>     
+
+    <!-- Carrossel com legenda -->
+	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="img/Propaganda1.jpeg" width="100px" height="300px" alt="Primeiro Slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4>Filmes</h4>
+                    <p>Que vão te levar para outro universo</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="img/Propaganda2.jpeg" width="100px" height="300px" alt="Segundo Slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4>Séries</h4>
+                    <p>Que vão tirar seu fôlego</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="img/Propaganda3.jpeg" width="100px" height="300px" alt="Terceiro Slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4>Animes</h4>
+                    <p>Que vão te surpreender</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+        </a>
+    </div>
+
+    <br><br>
+
+    <main>
+    	<h5 id="Filme">Filmes</h5>
+
+        <div class="row">
+            <div class="col-sm-4 accordion" id="accordionExample"> 
+    	        <div class="card" style="width: 20rem;">
+    	        	<div class="card-header" id="headingOne"> 
+                        <h5 class="mb-0"> 
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> <!---->
+                                <img class="card-img-top" src="img/GuerraAmanha.jpeg" alt="A Guerra do Amanha">
+                            </button> 
+                        </h5> 
+                    </div> 
+
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample"> 
+                        <div class="card-body">
+                            <h5 class="card-title">A Guerra do Amanhã</h5>
+                            <p class="card-text">A humanidade está perdendo uma batalha global contra uma espécie mortal de alienígenas em 2051. Para garantir a sobrevivência dos humanos, soldados e civis do presente são transportados para o futuro e se juntam à luta, entre eles Dan Forester (Chris Pratt), um pai de família determinado a salvar o mundo.</p>
+                            <a href="https://www.primevideo.com/detail/0QE52ED7GID2ZSEEZ5QYI0W1FS/ref=atv_hm_hom_1_c_LSHovs_ObUhkK_1_2?language=pt_BR" class="btn btn-danger">Assistir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+
+            <div class="col-sm-4">
+                <div class="card" style="width: 20rem;">
+                	<div class="card-header" id="headingTwo">
+                	    <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <img class="card-img-top" src="img/Awake.jpeg" height="160px" alt="Awake">
+                            </button>
+                        </h5>
+                    </div>
+
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <h5 class="card-title">Awake</h5>
+                            <p class="card-text">Após um incidente global que impede a humanidade de dormir, uma ex-militar luta para salvar a família, enfrentando o caos na sociedade e na própria mente. Com Gina Rodriguez e Shamier Anderson.</p><br><br><br>
+                            <a href="https://www.netflix.com/br/title/81040362" class="btn btn-danger">Assistir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="card" style="width: 20rem;">
+                	<div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <img class="card-img-top" src="img/Bliss.jpeg" height="160px" alt="Imagem de capa do card">
+                            </button>
+                        </h5>
+                    </div>
+
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <h5 class="card-title">Bliss: Em Busca da Felicidade</h5>
+                            <p class="card-text">Greg é um homem divorciado que vê sua vida toda mudar quando conhece Isabel. Ela afirma que o mundo onde vivem não passa de uma simulação tecnológica e que ninguém, além deles, é real. Aos poucos, Greg passa a acreditar em Isabel.</p><br><br>
+                            <a href="https://www.primevideo.com/region/na/detail/0TZZOB3Z54ASUBHSUJUZC1PD38/ref=atv_dp_amz_det_c_UTPsmN_1_19?language=pt_BR" class="btn btn-danger">Assistir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+
+        <h5 id="Serie">Séries</h5>
+
+    	<div class="row">
+            <div class="col-sm-4 accordion" id="accordionExample"> 
+    	        <div class="card" style="width: 20rem;">
+    	        	<div class="card-header" id="headingFour"> 
+                        <h5 class="mb-0"> 
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour"> 
+                                <img class="card-img-top" src="img/ControlZ.jpeg" alt="Imagem de capa do card">
+                            </button> 
+                        </h5> 
+                    </div> 
+
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <h5 class="card-title">Control Z</h5>
+                            <p class="card-text">Um hacker começa a divulgar os segredos dos alunos para toda a escola, e Sofia, uma menina observadora e solitária, quer descobrir quem está por trás disso.</p><br><br><br>
+                            <a href="https://www.netflix.com/br/title/81021245" class="btn btn-danger">Assistir</a>
+                        </div>
+                    </div>
+                </div>    
+            </div>    
+
+            <div class="col-sm-4">
+                <div class="card" style="width: 20rem;">
+                	<div class="card-header" id="headingFive"> 
+                        <h5 class="mb-0"> 
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive"> <!---->
+                                <img class="card-img-top" src="img/LaCasaDePapel.jpeg" alt="Imagem de capa do card">
+                            </button> 
+                        </h5> 
+                    </div> 
+
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">  
+                        <div class="card-body">
+                            <h5 class="card-title">La Casa de Papel</h5>
+                            <p class="card-text">Oito ladrões se trancam com reféns na Casa da Moeda da Espanha. Seu líder manipula a polícia para realizar um plano. Será o maior roubo da história, ou uma missão em vão?</p><br><br><br>
+                            <a href="https://www.netflix.com/br/title/80192098" class="btn btn-danger">Assistir</a>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+
+            <div class="col-sm-4">
+                <div class="card" style="width: 20rem;">
+                	<div class="card-header" id="headingSix"> 
+                        <h5 class="mb-0"> 
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix"> 
+                                <img class="card-img-top" src="img/GambitoRainha.jpeg" alt="Imagem de capa do card">
+                            </button> 
+                        </h5> 
+                    </div>
+
+                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">   
+                        <div class="card-body">
+                            <h5 class="card-title">O Gambito da Rainha</h5>
+                            <p class="card-text">Beth Harmon (Isla Johnston) é uma órfã de 9 anos quieta, taciturna e aparentemente comum. Isso até ela jogar sua primeira partida de xadrez. Seus sentidos ficam mais aguçados, seu pensamento mais claro e, pela primeira vez em sua vida, ela se sente totalmente no controle.</p>
+                            <a href="https://www.netflix.com/br/title/80234304" class="btn btn-danger">Assistir</a>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>  
+
+        <br><br>
+
+        <h5 id="Anime">Animes</h5>
+
+    	<div class="row">
+            <div class="col-sm-4 accordion" id="accordionExample"> 
+    	        <div class="card" style="width: 20rem;">
+    	        	<div class="card-header" id="headingSeven"> 
+                        <h5 class="mb-0"> 
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven"> 
+                                <img class="card-img-top" src="img/DemonSlayer.jpeg" height="170px" alt="Imagem de capa do card">
+                            </button> 
+                        </h5> 
+                    </div> 
+
+                    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <h5 class="card-title">Demon Slayer: Kimetsu no Yaiba</h5>
+                            <p class="card-text">Tanjiro é um menino que trabalha em uma mina de carvão para ajudar sua família a se sustentar. Entretanto, um dia após voltar do serviço, ele encontra sua família brutalmente assassinada, o que desperta em Tanjiro uma enorme sede de vingança.</p><br><br>
+                            <a href="https://www.netflix.com/br/Title/81091393" class="btn btn-danger">Assistir</a>
+                        </div>
+                    </div>
+                </div>    
+            </div>    
+
+            <div class="col-sm-4">
+                <div class="card" style="width: 20rem;">
+                	<div class="card-header" id="headingEight"> 
+                        <h5 class="mb-0"> 
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight"> 
+                                <img class="card-img-top" src="img/Slime.jpeg" height="170px" alt="Imagem de capa do card">
+                            </button> 
+                        </h5> 
+                    </div> 
+
+                    <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample"> 
+                        <div class="card-body">
+                            <h5 class="card-title">That Time I Got Reincarnated as a Slime</h5>
+                            <p class="card-text">O solitário Satoru Mikami, de 37 anos, ao proteger seu colega de trabalho com um empurrão, foi esfaqueado por um assaltante em fuga e falece de hemorragia. Contudo, ele mal podia imaginar que mais uma vez despertaria para um novo começo, mas dessa vez, em um mundo mágico... como um Slime!</p>
+                            <a href="https://www.crunchyroll.com/pt-br/that-time-i-got-reincarnated-as-a-slime" class="btn btn-danger">Assistir</a>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+
+            <div class="col-sm-4">
+                <div class="card" style="width: 20rem;">
+                	<div class="card-header" id="headingNine"> 
+                        <h5 class="mb-0"> 
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine"> 
+                                <img class="card-img-top" src="img/DrStone.jpeg" height="170px" alt="Imagem de capa do card">
+                            </button> 
+                        </h5> 
+                    </div> 
+
+                    <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">   
+                        <div class="card-body">
+                            <h5 class="card-title">Dr. Stone</h5>
+                            <p class="card-text">Senku é um gênio, que renasce 3.700 anos depois que uma luz misteriosa petrifica toda a humanidade. Usando-se de conhecimento científico, ele tenta restaurar a humanidade.</p><br><br><br><br><br>
+                            <a href="https://www.crunchyroll.com/pt-br/dr-stone" class="btn btn-danger">Assistir</a>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>  
+    </main>
+
+    <br><br><br>
+
+	<footer>
+		<div class="navbar fixed-bottom navbar-light" style="background-color: paleturquoise;">Todos os direitos reservados a Aline e Lucas. ©Copyrights 2021</div>
+	</footer>
+</body>
+</html>

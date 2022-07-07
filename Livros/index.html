@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Livraria</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+
+<body class="container" data-spy="scroll" data-target="#navbar-exemplo">
+	<header>
+		<div class="navbar navbar-light bg-light">
+  			<a class="navbar-brand" href="index.html">
+    			<img src="img/logo.png" width="60" height="60" class="d-inline-block align-top" alt="Livro">Paraíso da Leitura
+  			</a>
+		
+  		    <form class="form-inline">
+    		    <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+    		    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+  		    </form>
+
+            <img src="img/Carrinho.png" width="60px" height="50px">
+		</div>
+	</header>
+
+	<nav>
+    <ul class="nav justify-content-end alert alert-primary">
+        <li class="nav-link"> 
+            <a href="index.html">Home</a>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Livros</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#Aventura">Ação e Aventura</a>
+                <a class="dropdown-item" href="#Romance">Romance</a>
+                <a class="dropdown-item" href="#Terror">Terror e Suspense</a>
+                <div class="dropdown-divider"></div>
+                <div class="dropdown-item disable">Séries:</div>
+                <a class="dropdown-item" href="PercyJackson.html">Percy Jackson</a>
+                <a class="dropdown-item" href="HeroisOlimpo.html">Os Heróis do Olimpo</a>
+                <a class="dropdown-item" href="ProvacoesApolo.html">As Provações de Apolo</a>
+                <a class="dropdown-item" href="MagnusChase.html">Magnus Chase</a>
+                <a class="dropdown-item" href="CronicasKane.html">As Crônicas dos Kane</a>
+                <a class="dropdown-item" href="HarryPotter.html">Harry Potter</a>
+                <a class="dropdown-item" href="InstrumentosMortais.html">Instrumentos Mortais</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Autores</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="PercyJackson.html">Rick Riordan</a>
+                <a class="dropdown-item" href="HarryPotter.html">J.K. Rowling</a>
+                <a class="dropdown-item" href="InstrumentosMortais.html">Cassandra Clare</a>
+                <a class="dropdown-item" href="#Romance">Kiera Cass</a>
+                <a class="dropdown-item" href="#Romance">Jane Austen</a>
+                <a class="dropdown-item" href="#Romance">John Green</a>
+                <a class="dropdown-item" href="#Terror">Mary Shelley</a>
+                <a class="dropdown-item" href="#Terror">Stephen King</a>
+                <a class="dropdown-item" href="#Terror">Bram Stoker</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Editoras</a>
+            <div class="dropdown-menu">
+                <div class="dropdown-item disable">Intriseca</div>
+                <div class="dropdown-item disable">Rocco</div>
+                <div class="dropdown-item disable">Galera</div>
+                <div class="dropdown-item disable">Seguinte</div>
+                <div class="dropdown-item disable">Principis</div>
+                <div class="dropdown-item disable">Suma</div>
+                <div class="dropdown-item disable">Zahar</div>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Outros</a>
+            <div class="dropdown-menu">
+                <div class="dropdown-item disable">Quem Somos</div>
+                <div class="dropdown-item disable">Contato</div>
+                <div class="dropdown-item disable">Perguntas Frequentes</div>
+            </div>
+        </li>
+    </ul>
+  </nav>
+
+  <div id="Propaganda"> <!-- Carrossel de Propagandas -->
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-50" src="img/Propaganda1.jpeg" alt="Primeiro Slide" height="250px" width="200px"> 
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-50" src="img/Propaganda2.png" alt="Segundo Slide" height="250px" width="200px"> 
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-50" src="img/Propaganda3.jpeg" alt="Terceiro Slide" height="250px" width="200px">
+            </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
+        </div>
+  </div>
+
+  <aside>
+        <div id="navbar-exemplo" class="list-group">
+    <ul class="nav nav-tabs" role="tablist">
+  <a class="list-group-item list-group-item-action" href="#Aventura">Ação e Aventura</a>
+  <a class="list-group-item list-group-item-action" href="#Romance">Romance</a>
+  <a class="list-group-item list-group-item-action" href="#Terror">Terror</a>
+</ul>
+</div>
+    </aside>
+
+	<main>
+    <div data-spy="scroll" data-target="#navbar-exemplo" data-offset="0" class="scrollspy-example">
+        <h5 id="Aventura">Ação e Aventura</h5>
+        <div class="card-deck"> <!-- Cards -->
+         <div class="card border-success mb-3" style="max-width: 18rem;">
+          <a href="Compras.html"><img class="card-img-top" src="img/LadraoRaios.jpeg" alt="Imagem de capa do card" height="80%"></a>
+          <div class="card-body text-success">
+           <h5 class="card-title">O Ladrão de Raios</h5>
+           <p class="card-text">Autor: Rick Riordan</p>
+           <p class="card-text">Editora: Intriseca</p>
+           <p class="card-text">Preço: R$34,90</p>
+          </div>
+          <div class="card-footer">
+           <small class="text-muted">+ Adicionar ao Carrinho</small>
+          </div>
+         </div>
+
+      <div class="card border-danger mb-3" style="max-width: 18rem;">
+        <a href="Compras.html"><img class="card-img-top" src="img/PedraFilosofal.jpeg" alt="Imagem de capa do card" height="83%"></a>
+        <div class="card-body text-danger">
+          <h5 class="card-title">A Pedra Filosofal</h5>
+          <p class="card-text">Autor: J.K. Rowling</p>
+          <p class="card-text">Editora: Rocco</p>
+          <p class="card-text">Preço: R$44,90</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">+ Adicionar ao Carrinho</small>
+        </div>
+      </div>
+
+         <div class="card border-info mb-3" style="max-width: 18rem;">
+        <a href="Compras.html"><img class="card-img-top" src="img/CidadeCinzas.png" alt="Imagem de capa do card" height="80%"></a>
+        <div class="card-body text-info">
+          <h5 class="card-title">Cidade das Cinzas</h5>
+          <p class="card-text">Autor: Cassandra Clare</p>
+          <p class="card-text">Editora: Galera</p>
+          <p class="card-text">Preço: R$27,45</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">+ Adicionar ao Carrinho</small>
+        </div>
+      </div>
+        </div>  
+
+    <br><hr><br>
+
+        <h5 id="Romance">Romance</h5>
+        <div class="card-deck">
+      <div class="card border-success mb-3" style="max-width: 18rem;">
+        <a href="Compras.html"><img class="card-img-top" src="img/ASelecao.jpeg" alt="Imagem de capa do card" height="80%"></a>
+        <div class="card-body text-success">
+          <h5 class="card-title">A Seleção</h5>
+          <p class="card-text">Autor: Kiera Cass</p>
+          <p class="card-text">Editora: Seguinte</p>
+          <p class="card-text">Preço: R$32,75</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">+ Adicionar ao Carrinho</small>
+        </div>
+      </div>
+
+      <div class="card border-danger mb-3" style="max-width: 18rem;">
+        <a href="Compras.html"><img class="card-img-top" src="img/OrgulhoPreconceito.jpeg" alt="Imagem de capa do card" height="83%"></a>
+        <div class="card-body text-danger">
+          <h5 class="card-title">Orgulho e Preconceito</h5>
+          <p class="card-text">Autor: Jane Austen</p>
+          <p class="card-text">Editora: Principis</p>
+          <p class="card-text">Preço: R$39,90</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">+ Adicionar ao Carrinho</small>
+        </div>
+      </div>
+
+      <div class="card border-primary mb-3" style="max-width: 18rem;">
+        <a href="Compras.html"><img class="card-img-top" src="img/CulpaEstrelas.jpeg" alt="Imagem de capa do card" height="80%"></a>
+        <div class="card-body text-primary">
+          <h5 class="card-title">A Culpa é das Estrelas</h5>
+          <p class="card-text">Autor: John Green</p>
+          <p class="card-text">Editora: Intriseca</p>
+          <p class="card-text">Preço: R$26,90</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">+ Adicionar ao Carrinho</small>
+        </div>
+      </div>
+    </div>  
+
+    <br><hr><br>
+
+        <h5 id="Terror">Terror e Suspense</h5>
+        <div class="card-deck">
+      <div class="card border-success mb-3" style="max-width: 18rem;">
+        <a href="Compras.html"><img class="card-img-top" src="img/Frankenstein.jpeg" alt="Imagem de capa do card" height="80%"></a>
+        <div class="card-body text-success">
+          <h5 class="card-title">Frankenstein</h5>
+          <p class="card-text">Autor: Mary Shelley</p>
+          <p class="card-text">Editora: Principis</p>
+          <p class="card-text">Preço: R$19,27</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">+ Adicionar ao Carrinho</small>
+        </div>
+      </div>
+
+      <div class="card border-danger mb-3" style="max-width: 18rem;">
+        <a href="Compras.html"><img class="card-img-top" src="img/It.jpeg" alt="Imagem de capa do card" height="80%"></a>
+        <div class="card-body text-danger">
+          <h5 class="card-title">It - A Coisa</h5>
+          <p class="card-text">Autor: Stephen King</p>
+          <p class="card-text">Editora: Suma</p>
+          <p class="card-text">Preço: R$39,90</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">+ Adicionar ao Carrinho</small>
+        </div>
+      </div>
+
+      <div class="card border-secondary mb-3" style="max-width: 18rem;">
+        <a href="Compras.html"><img class="card-img-top" src="img/Dracula.jpeg" alt="Imagem de capa do card" height="83%"></a>
+        <div class="card-body text-secondary">
+          <h5 class="card-title">Drácula</h5>
+          <p class="card-text">Autor: Bram Stoker</p>
+          <p class="card-text">Editora: Zahar</p>
+          <p class="card-text">Preço: R$51,69</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">+ Adicionar ao Carrinho</small>
+        </div>
+      </div>
+     </div>
+   </div>    
+	</main>
+
+	<footer>
+		<div class="alert alert-info">Paraíso da Leitura, todos os direitos reservados. Copyrights 2021</div>
+	</footer>
+</body>
+</html>

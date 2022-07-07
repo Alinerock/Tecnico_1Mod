@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simulando Inclusao e Consulta</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+
+	        // INCLUSÃO
+			$("#Incluir").click(function(){
+
+				var formDados = $('#Formulario').serialize();
+
+				$.ajax({
+
+					method: 'GET',
+					url: 'incluir.php',
+					data: formDados,
+
+					beforeSend: function(){
+						$("#retorno").html("Carregando, aguarde...");
+					} 
+				})
+
+				.done (function(msgPHP){
+					$("#retorno").html(msgPHP);
+				})
+
+				.fail (function(){
+					$("#retorno").html("Erro de conexão, tente novamente.");
+				})
+
+				return false;
+			});
+
+
+			// PESQUISA
+			$("#Pesquisar").click(function(){
+
+				var formDados = $('#Formulario').serialize();
+
+				$.ajax({
+
+					method: 'GET',
+					url: 'pesquisar.php',
+					data: formDados,
+
+					beforeSend: function(){
+						$('#retorno').html("Carregando, aguarde...");
+					} 
+				})
+
+				.done (function(dadosPHP){
+					$('#retorno').html(dadosPHP);
+
+					var dadosProd = JSON.parse(dadosPHP);
+
+					var Bloco = '';
+					Bloco += "CodProd"   + dadosProd.CodProd   + "<br>";
+					Bloco += "Descricao" + dadosProd.Descricao + "<br>";
+					Bloco += "Valor"     + dadosProd.Valor     + "<br>";
+					Bloco += "Qtde"      + dadosProd.Qtde      + "<br>";
+
+					$('#retorno').html(Bloco);
+				})
+
+				.fail (function(){
+					$('#retorno').html("Erro de conexão, tente novamente.");
+				})
+
+				return false;
+			});
+
+
+			// CÁLCULO
+			$("#Calcular").click(function(){
+
+				var formDados = $('#Formulario').serialize();
+
+				$.ajax({
+
+					method: 'GET',
+					url: 'calcular.php',
+					data: formDados,
+
+					beforeSend: function(){
+						$('#retorno').html("Carregando, aguarde...")	
+					}			
+				})
+
+				.done (function(msgPHP){
+					$('#retorno').html(msgPHP);
+				})
+
+				.fail (function(){
+					$('#retorno').html("Erro de conexão, tente novamente.");
+				})
+
+				return false;
+			});
+		});
+
+	</script>
+</head>
+
+<body class="alert alert-light">
+	<form id="Formulario" method="get" action="">
+		<label>CodProd</label>
+		<input type="number" id="CodProd" name="CodProd"><br>
+
+		<label>Descricao</label>
+		<input type="text" id="Descricao" name="Descricao"><br>
+
+		<label>Valor</label>
+		<input type="number" id="Valor" name="Valor"><br>
+
+		<label>Qtde</label>
+		<input type="number" id="Qtde" name="Qtde"><br><br>
+
+		<input type="submit" class="btn btn-danger"  id="Incluir"   name="Incluir"   value="Incluir">
+		<input type="submit" class="btn btn-success" id="Pesquisar" name="Pesquisar" value="Pesquisar">
+		<input type="submit" class="btn btn-info"    id="Calcular"  name="Calcular"  value="Calcular">
+	</form>
+
+	<br><br><br>
+
+	<div id="retorno"></div>
+
+</body>
+</html>

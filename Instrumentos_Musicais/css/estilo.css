@@ -1,0 +1,96 @@
+/* Seletores */
+body {
+	background-color: #384E77;
+	color: white;
+	font-family: Castellar;
+	text-shadow: 1px 1px 1px #111111;
+	margin: 0px 20px;
+}
+
+p {
+	font-family: arial;
+	text-indent: 50px;
+	text-align: justify;
+}
+
+input, select, textarea {
+	padding: 2px 4px;
+	background-color: lightgray;
+	border-style: groove;
+}
+
+
+/* Classes */
+
+.classificacaoIndicativa {
+	border-style: double;
+	box-sizing: border-box;
+	margin: 100px 50px 100px 50px;
+	padding: 1px 5px;
+}
+
+.botao {
+	border-style: solid;
+	border-radius: 10px;
+	box-sizing: border-box;
+	margin-left: 50px;
+	padding: 15px 8px;
+	line-height: 50px;
+	background-color: #384E77;
+	color: white;
+	text-decoration: none;
+	font-size: 15px;
+	font-weight: 500;
+}
+
+.botao img{
+	padding: 8px 10px 0px 2px;
+}
+
+/* comando para mudar o fundo quando passar o mouse por cima */
+.botao:hover {
+	background-color: darkturquoise;
+}
+
+.centralizar {
+	text-align: center;
+}
+
+.titulo {
+	margin-left: 50px;
+}
+
+.sinopse {
+	margin: 20px 10px 10px 575px;
+}
+
+.relacionados {
+	margin-left: 50px;
+	padding: 2px 1px 0px 50px;
+	font-family: arial;
+	font-size: 15px;
+	text-transform: uppercase;
+	max-width: 92px;
+}
+
+.relacionados img{
+	border-radius: 20px;
+	padding: 5px;	
+	width: 80px;
+}
+
+a.href {
+	color: white;
+	font-family: arial;
+	text-indent: 50px;
+}
+
+/* ID */
+
+#bilheteria {
+	margin: 0px 60px;
+}
+
+#bilheteria img {
+	padding: 0px 10px;
+}

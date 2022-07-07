@@ -1,0 +1,20 @@
+body {
+	background-color: #e3f2fd;
+}
+
+h5 {
+	font-family: "Times New Roman";
+	font-size: 20px;
+	font-style: oblique;
+} 
+
+#Filme, #Serie, #Anime {
+	font-family: fantasy;
+	font-size: 35px;
+	font-style: normal;
+}
+
+.btn-danger {
+	border-style: inset;
+	border-color: firebrick;
+}
