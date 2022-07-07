@@ -1,0 +1,75 @@
+.container {
+	display: grid;
+	grid-template-columns: 1fr 6fr;
+	grid-template-rows: 12vh 10vh 40vh 345vh 6vh;
+	grid-template-areas: "header header"
+                         "nav nav"
+                         "div div"
+                         "aside main"
+                         "footer footer"; 
+}
+
+header {
+	grid-area: header;
+	width: 119%;
+	position: absolute;
+}
+
+nav {
+	grid-area: nav;
+	width: 119%;
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+
+#Propaganda {
+	grid-area: div;
+	width: 119%;
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+
+aside {
+	grid-area: aside;
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+
+main {
+	grid-area: main;
+	width: 119%;
+	padding: 0px 80px;
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+
+footer {
+	grid-area: footer;
+	width: 119%;
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+
+body {
+	position: absolute;
+}
+
+/* Layout Responsivo*/
+@media screen and (max-width: 580px) {
+	body {
+	    background-color: lightgrey;
+    }
+
+    .container {
+	    grid-template-rows: 28vh 19vh 45vh 820vh 12vh;
+    }
+
+	header, nav, #Propaganda, main, footer {
+	    width: 100%;
+    }
+}

@@ -1,0 +1,178 @@
+<!-- Cabeçalho -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Compras</title>
+</head>
+
+<body>
+	<h1>DADOS PESSOAIS</h1> <!-- Título -->
+	<form id="DadosCliente" action="" method="get"> <!-- Formulário com estrutura de tabela --> <!-- O atributo action especifica a página para onde esses dados serão enviados e o atributo method especifica como esses dados serão enviados -->
+
+		<table border="0">
+			<tr>
+				<td><label>Nome:</label></td>
+				<td><input type="text" id="Nome" name="Nome" size="30" maxlength="50" placeholder="Nome Completo" required></td>
+			</tr>
+
+			<tr>
+				<td><label>Nascimento:</label></td>
+				<td><input type="date" id="Nascimento" name="Nascimento" required></td>
+			</tr>
+
+			<tr>
+				<td><label>CPF:</label></td>
+				<td><input type="number" id="CPF" name="CPF" required></td>
+			</tr>
+
+			<tr>
+				<td><label>Telefone:</label></td>
+				<td><input type="number" id="Telefone" name="Telefone" placeholder="Ex: (11) 93082-7269" required></td>
+			</tr>
+
+			<tr>
+				<td><label>Email:</label></td>
+				<td><input type="text" id="Email" name="Email" required></td>
+			</tr>
+
+            <tr>
+                <td><label>CEP:</label></td>
+                <td><input type="number" id="CEP" name="CEP" required></td>            	
+            </tr>
+
+			<tr>
+				<td><label>Estado:</label></td>
+				<td><select id="Estado" name="Estado">
+					<option>Selecione</option>
+					<option value="AC">Acre</option>
+					<option value="AL">Alagoas</option>
+					<option value="AP">Amapá</option>
+					<option value="AM">Amazonas</option>
+					<option value="BA">Bahia</option>
+					<option value="CE">Ceará</option>
+					<option value="ES">Espírito Santo</option>
+					<option value="GO">Goiás</option>
+					<option value="MA">Maranhão</option>
+					<option value="MT">Mato Grosso</option>
+					<option value="MS">Mato Grosso do Sul</option>
+					<option value="MG">Minas Gerais</option>
+					<option value="PA">Pará</option>
+					<option value="PB">Paraíba</option>
+					<option value="PR">Paraná</option>
+					<option value="PE">Pernambuco</option>
+					<option value="PI">Piauí</option>
+					<option value="RJ">Rio de Janeiro</option>
+					<option value="RN">Rio Grande do Norte</option>
+					<option value="RS">Rio Grande do Sul</option>
+					<option value="RO">Rondônia</option>
+					<option value="RR">Roraima</option>
+					<option value="SC">Santa Catarina</option>
+					<option value="SP">São Paulo</option>
+					<option value="SE">Sergipe</option>
+					<option value="TO">Tocantins</option>
+					<option value="DF">Distrito Federal</option>
+				</select></td>
+			</tr>
+
+			<tr>
+				<td><label>Cidade:</label></td>
+				<td><input type="text" id="Cidade" name="Cidade" size="30" maxlength="50"></td>
+			</tr>
+
+			<tr>
+				<td><label>Bairro:</label></td>
+				<td><input type="text" id="Bairro" name="Bairro"></td>
+			</tr>
+
+			<tr>
+				<td><label>Rua:</label></td>
+				<td><input type="text" id="Rua" name="Rua" placeholder="Rua, Número" required></td>
+			</tr>
+
+			<tr>
+				<td><input type="submit" id="Enviar" name="Enviar" value="Enviar"></td>
+				<td><input type="reset" id="Botao" name="Botao" value="Limpar"></td>
+			</tr>
+		</table>	
+    </form>
+
+    <br><hr><br>
+
+	<h1>COMPRAR</h1> <!-- Título -->
+	<form id="Compras" action="" method="get">
+
+		<table>
+			<tr>
+				<td><label>Produto:</label></td>
+				<td><input type="text" id="Produto" name="Produto" size="30" maxlength="50" required></td>
+			</tr>
+
+			<tr>
+				<td><label>Quantidade:</label></td>
+				<td><input type="number" id="Quantidade" name="Quantidade" required></td>
+			</tr>
+
+			<tr>
+				<td><label>Forma de Pagamento:</label></td>
+				<td><input type="radio" id="Pagamento" name="Pagamento" value="B" required>Boleto Bancário</td> <!-- Permite selecionar apenas uma das opções -->
+				<td><input type="radio" id="Pagamento" name="Pagamento" value="C">Crédito</td>
+				<td><input type="radio" id="Pagamento" name="Pagamento" value="D">Débito</td>
+				<td><input type="radio" id="Pagamento" name="Pagamento" value="P">Pix</td>
+			</tr>
+
+			<tr>
+				<td><label>Parcelamento:</label></td>
+				<td><select id="Parcelamento" name="Parcelamento" required>
+			            <option value="1">1x</option>
+			            <option value="2">2x</option>
+			            <option value="3">3x</option>
+			            <option value="4">4x</option>
+			            <option value="5">5x</option>
+			            <option value="6">6x</option>
+			            <option value="7">7x</option>
+			            <option value="8">8x</option>
+			            <option value="9">9x</option>
+			            <option value="10">10x</option>
+			            <option value="11">11x</option>
+			            <option value="12">12x</option>
+			            <option value="13">13x</option>
+			            <option value="14">14x</option>
+			            <option value="15">15x</option>
+			            <option value="16">16x</option>
+			            <option value="17">17x</option>
+			            <option value="18">18x</option>
+			            <option value="19">19x</option>
+			            <option value="20">20x</option>
+		            </select></td>
+			</tr>
+
+			<tr>
+				<td><label>Número do Cartão:</label></td>
+				<td><input type="number" id="NumCartao" name="NumCartao" required></td>
+			</tr>
+
+            <tr>
+                <td><label>Cupom de Desconto:</label></td>
+                <td><input type="text" id="Cupom" name="Cupom"></td>	
+            </tr>
+
+            <tr>
+			    <td><label>Sugestões:</label></td>
+		        <td><textarea cols="30" rows="4" id="Sugestoes" name="Sugestoes"></textarea></td>
+            </tr>
+
+			<tr>
+				<td><input type="submit" id="Enviar" name="Enviar" value="Enviar"></td>
+				<td><input type="reset" id="Limpar" name="Limpar" value="Limpar"></td>
+			</tr>
+		</table>
+	</form>	
+	
+    <br><br>
+
+	<a href="index.html"><img src="img/home.png" width="6%"></a> <!-- Imagem com link para a página inicial -->
+
+
+</body>
+</html>

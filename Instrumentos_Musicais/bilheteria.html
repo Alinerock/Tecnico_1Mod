@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Bilheteria</title>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+
+<body id="bilheteria">
+	<h1>Bilheteria<img src="img/bilhete.png" width="4%"></h1>
+	<form>
+		<table>
+			<tr>
+				<td><label>Nome: </label></td>
+				<td><input type="text" id="Nome" name="Nome" size="30" maxlength="50" placeholder="Nome Completo" required></td>
+			</tr>
+
+			<tr>
+				<td><label>Data de Nascimento: </label></td>
+				<td><input type="date" id="Nascimento" name="Nascimento" required></td>
+			</tr>
+
+			<tr>
+				<td><label>Estado:</label></td>
+				<td><select id="Estado" name="Estado" required>
+					<option>Selecione</option>
+					<option value="AC">Acre</option>
+					<option value="AL">Alagoas</option>
+					<option value="AP">Amapá</option>
+					<option value="AM">Amazonas</option>
+					<option value="BA">Bahia</option>
+					<option value="CE">Ceará</option>
+					<option value="ES">Espírito Santo</option>
+					<option value="GO">Goiás</option>
+					<option value="MA">Maranhão</option>
+					<option value="MT">Mato Grosso</option>
+					<option value="MS">Mato Grosso do Sul</option>
+					<option value="MG">Minas Gerais</option>
+					<option value="PA">Pará</option>
+					<option value="PB">Paraíba</option>
+					<option value="PR">Paraná</option>
+					<option value="PE">Pernambuco</option>
+					<option value="PI">Piauí</option>
+					<option value="RJ">Rio de Janeiro</option>
+					<option value="RN">Rio Grande do Norte</option>
+					<option value="RS">Rio Grande do Sul</option>
+					<option value="RO">Rondônia</option>
+					<option value="RR">Roraima</option>
+					<option value="SC">Santa Catarina</option>
+					<option value="SP">São Paulo</option>
+					<option value="SE">Sergipe</option>
+					<option value="TO">Tocantins</option>
+					<option value="DF">Distrito Federal</option>
+				</select></td>
+			</tr>
+
+			<tr>
+				<td><label>Cidade:</label></td>
+				<td><input type="text" id="Cidade" name="Cidade" size="30" maxlength="50" required></td>
+			</tr>
+
+			<tr>
+				<td><label>Local:</label></td>
+				<td><select id="Local" name="Local" required>
+					<option>Selecione</option>
+					<option value="Cinepolis">Cinépolis</option>
+					<option value="Centerplex">Centerplex</option>
+					<option value="PlayArte">PlayArte</option>
+				</select></td>
+			</tr>
+
+			<tr>
+				<td><label>Sessão:</label></td>
+				<td><input type="date" id="Sessao" name="Sessao" required></td>
+			</tr>
+
+			<tr>
+				<td><label>Horário:</label></td>
+				<td><select id="Horario" name="Horario" required>
+					<option>Selecione</option>
+					<option value="830">8h 30min</option>
+					<option value="1515">15h 15min</option>
+					<option value="1715">17h 15min</option>
+					<option value="2045">20h 45min</option>
+				</select></td>
+			</tr>
+
+			<tr>
+				<td><label>Filme:</label></td>
+				<td><select id="Filme" name="Filme" required>
+					<option>Selecione</option>
+					<option value="VF">Velozes e Furiosos 9</option>
+					<option value="JC">Jungle Cruise</option>
+					<option value="L">Luca</option>
+					<option value="VN">Viúva Negra</option>
+					<option value="CL">O Chapeleiro Louco</option>
+					<option value="MP">Na Mira do Perigo</option>
+					<option value="MC">Mundo em Caos</option>
+					<option value="C">Cruella</option></td>
+			</tr>
+
+			<tr>
+				<td><label>Formato:</label></td>
+				<td><input type="radio" id="Formato" name="Formato" value="2D" required>2D</td>
+				<td><input type="radio" id="Formato" name="Formato" value="3D">3D</td>
+				<td><input type="radio" id="Formato" name="Formato" value="4D">4D</td>
+			</tr>
+
+			<tr>
+				<td><label>Versão:</label></td>
+				<td><input type="radio" id="Versao" name="Versao" value="Dublado" required>Dublado</td>
+				<td><input type="radio" id="Versao" name="Versao" value="Legendado">Legendado</td>
+			</tr>
+
+			<tr>
+				<td><label>Quantidade de ingressos:</label></td>
+				<td><input type="number" id="Quantidade" name="Quantidade" required min="1" max="5"></td>
+			</tr>
+
+			<tr>
+				<td><label>Cadeira: </label></td>
+				<td><input type="checkbox" id="Cadeira" name="Cadeira" value="1A" required>1A
+					<input type="checkbox" id="Cadeira" name="Cadeira" value="3E">3E
+					<input type="checkbox" id="Cadeira" name="Cadeira" value="4D">4D
+					<input type="checkbox" id="Cadeira" name="Cadeira" value="5B">5B
+					<input type="checkbox" id="Cadeira" name="Cadeira" value="6C">6C
+				</td>
+			</tr>
+
+			<tr>
+				<td><label>Forma de Pagamento:</label></td>
+				<td><input type="radio" id="Pagamento" name="Pagamento" value="B" required>Boleto Bancário</td>
+				<td><input type="radio" id="Pagamento" name="Pagamento" value="C">Crédito</td>
+				<td><input type="radio" id="Pagamento" name="Pagamento" value="D">Débito</td>
+				<td><input type="radio" id="Pagamento" name="Pagamento" value="P">Pix</td>
+			</tr>
+
+			<tr>
+				<td><label>Número do Cartão:</label></td>
+				<td><input type="number" id="NumCartao" name="NumCartao" required></td>
+			</tr>
+
+			<tr>
+			    <td><label>Sugestões:</label></td>
+		        <td><textarea cols="30" rows="4" id="Sugestoes" name="Sugestoes"></textarea></td>
+            </tr>
+
+			<tr>
+				<td><input type="submit" id="Enviar" name="Enviar" value="Enviar"></td>
+				<td><input type="reset" id="Limpar" name="Limpar" value="Limpar"></td>
+			</tr>
+		</table>
+	</form>
+
+	<br><hr><br><br>
+
+	<a href="index.html" class="botao"><img src="img/voltar1.png" width="1.2%">Voltar</a>
+</body>
+</html>

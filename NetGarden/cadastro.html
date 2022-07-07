@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <!-- Aba da página com imagem--->
+    <link rel="shortcut icon" type="imagem/x-icon" href="img/Logo1.jpg">
+	<title>CADASTRO</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      // ENVIO
+			$("#enviar").click(function(){
+
+        var formDados = $('#Formulario').serialize();
+
+        $.ajax({
+
+          method: 'GET',
+          url: 'enviar.php',
+          data: formDados,
+
+          beforeSend: function(){
+            $('#retorno').html("Carregando, aguarde...");
+          } 
+        })
+
+        .done (function(msgPHP){
+          $('#retorno').html(msgPHP);
+        })
+
+        .fail (function(){
+          $('#retorno').html("Erro de conexão, tente novamente.");
+        })
+
+        return false;
+			});
+
+      // PESQUISA
+      $("#pesquisar").click(function(){
+
+        var formDados = $('#Formulario').serialize();
+
+        $.ajax({
+
+          method: 'GET',
+          url: 'pesquisar.php',
+          data: formDados,
+
+          beforeSend: function(){
+            $('#retorno').html("Carregando, aguarde...");
+          } 
+        })
+
+        .done (function(dadosPHP){
+          $('#retorno').html(dadosPHP);
+
+          var dadosProd = JSON.parse(dadosPHP);
+
+          var Bloco = '';
+          Bloco += "Nome"       + dadosProd.Nome        + "<br>";
+          Bloco += "Sobrenome"  + dadosProd.Sobrenome   + "<br>";
+          Bloco += "Telefone"   + dadosProd.Telefone    + "<br>";
+          Bloco += "Telefone2"  + dadosProd.Telefone2   + "<br>";
+          Bloco += "Email"      + dadosProd.Email       + "<br>";
+          Bloco += "Senha"      + dadosProd.Senha       + "<br>";
+          Bloco += "Endereco"   + dadosProd.Endereco    + "<br>";
+          Bloco += "Complemento"+ dadosProd.Complemento + "<br>";
+          Bloco += "Cidade"     + dadosProd.Cidade      + "<br>";
+          Bloco += "Estado"     + dadosProd.Estado      + "<br>";
+          Bloco += "CEP"        + dadosProd.CEP         + "<br>";
+
+          $('#retorno').html(Bloco);
+        })
+
+        .fail (function(){
+          $('#retorno').html("Erro de conexão, tente novamente.");
+        })
+
+        return false;
+      });
+    });
+  </script>
+</head>
+
+<body id="container">
+	<header>
+		<nav class="navbar navbar-light bg-light">
+			<a class="navbar-brand" href="index.html">
+				<img src="img/Logo.png" width="50" height="30" class="d-inline-block align-top" alt="">NetGarden
+			</a>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Alterna navegação">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+		</nav>
+		<br>
+		<h1 class="font centralizar">Cadastro</h1>
+	</header>
+
+<main>
+	
+
+	<form class="distancia" id="Formulario" method="get" action="">
+
+  <div class="form-row">
+  	<div class="form-group col-md-6">
+      <label for="inputName4">Nome</label>
+      <input type="text" class="form-control" id="Nome" name="Nome" placeholder="Nome">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputLastNam4">Sobrenome</label>
+      <input type="text" class="form-control" id="Sobrenome" name="Sobrenome" placeholder="Sobrenome">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputTel4">Telefone</label>
+      <input type="number" class="form-control" id="Telefone" name="Telefone" placeholder="Telefone">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputTel4">Telefone 2</label>
+      <input type="number" class="form-control" id="Telefone2" name="Telefone2" placeholder="Telefone">
+    </div>
+        <div class="form-group col-md-6">
+      <label for="inputEmail4">Email</label>
+      <input type="email" class="form-control" id="Email" name="Email" placeholder="Email">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Senha</label>
+      <input type="password" class="form-control" id="Senha" name="Senha" placeholder="Senha">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Endereço</label>
+    <input type="text" class="form-control" id="Endereco" name="Endereco" placeholder="Rua XYZ, nº 0">
+  </div>
+  <div class="form-group">
+    <label for="inputAddress2">Complemento</label>
+    <input type="text" class="form-control" id="Complemento" name="Complemento" placeholder="Apartamento, hotel, casa, etc.">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">Cidade</label>
+      <input type="text" class="form-control" id="Cidade" name="Cidade">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputEstado">Estado</label>
+      <select id="Estado" name="Estado" class="form-control">
+        <option selected>Escolher...</option>
+        <option>Espírito Santo-ES</option>
+        <option>Minas Gerais-MG</option>
+        <option>Rio de Janeiro-RJ</option>
+        <option>São Paulo-SP</option>
+      </select>
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputCEP">CEP</label>
+      <input type="text" class="form-control" id="CEP" name="CEP">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck" name="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Confirme 
+      </label>
+    </div>
+  </div>
+
+  
+  <button type="submit" class="btn btn-success centralizar" id="pesquisar" name="pesquisar" value="pesquisar">Pesquisar</button>
+  <button type="submit" class="btn btn-success centralizar" id="enviar"    name="enviar"    value="enviar">Enviar</button>
+  <button type="reset" class="btn btn-success centralizar" id="limpar"    name="limpar"    value="limpar">Limpar</button>
+
+</form>
+
+<div id="retorno">
+
+</div>
+
+
+</main>
+</body>

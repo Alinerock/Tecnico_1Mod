@@ -1,0 +1,17 @@
+body {
+	background-color: paleturquoise;
+}
+
+form {
+	position: absolute;
+	top: 100px;
+	left: 200px;
+	width: 550px;
+	height: 400px;
+}
+
+#Resultado {
+	position: absolute;
+	top: 100px;
+	left: 800px;
+}
